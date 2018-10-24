@@ -1,0 +1,344 @@
+
+/*===========================浮动导航栏==========================*/
+
+.flmenu{
+  top:-140px;
+  /*position: absolute;*/
+  position: fixed;
+  /*top:899px;*/
+  /*left: 0;*/
+  width: 100%;
+  height: 108px;
+  z-index: 99;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  opacity: 1;
+  transition:all 0.5s ease;
+}
+.flmenu .flmenubg{
+  z-index: 1;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.95;
+}
+.flmenu .flmenucont{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.flmenu.drop{
+  top:0px;
+  transition:all 0.5s ease;
+
+}
+.flmenu .fllogo{
+  position: absolute;
+  top:18px;
+  left: 18px;
+  width: 480px;
+  height:107px;
+  z-index: 2;
+}
+.flmenu .fllogo img{
+  width: 120px;
+  height: 120px;
+}
+.flmenu .fllogo h2{
+  display: block;
+  position: absolute;
+  top:12px;
+  left:156px;
+  font:bold 35px "microsoft yahei";
+}
+.flmenu .fllogo h5{
+  display: block;
+  position: absolute;
+  top:65px;
+  left: 155px;
+  color: #999;
+  font:normal 14px "microsoft yahei";
+  letter-spacing: 5px
+}
+.flmenu .flnav{
+  position: absolute;
+  top:42px;
+  left: 493px;
+  width: 521px;
+  height: 33px;
+}
+.flmenu .flnav .thumb{
+  position: absolute;
+  top:28px;
+  left: 0;
+  width: 65px;
+  height: 4px;
+  background: url(../images/spirite.png) -20px -107px no-repeat;
+}
+.flmenu .flnav a{
+  display: block;
+  float: left;
+  height:67px;
+  color: #000;
+  font:normal 16px/28px "microsoft yahei";
+  transition:all 0.5s ease;
+}
+.flmenu .flnav a:hover{
+  color: #8d57ba;
+  transition:all 0.5s ease;
+}
+
+.flmenu .flnav i{
+  display: block;
+  float: left;
+  margin:4px 0 -5px 5px;
+  width:21px;
+  height:22px;
+  background: url(../images/spirite.png) 0px -91px no-repeat;
+}
+.flmenu .flnav .flnav-hot-dot{
+  position: absolute;
+  top:0;
+  left:423px;
+  width: 25px;
+  height: 13px;
+  background-color: #C02C2C;
+  background: url(http://panda3.woniu.com/static/web201703/images/spirite.png) -93px -90px no-repeat;
+}
+
+.flmenu .flduebtn{
+  position: relative;
+  float: right;
+  display: block;
+  margin: 28px 31px 0 0 ;
+  width: 205px;
+  height: 52px;
+  /*height: 60px;*/
+  border-radius: 4px;
+  color: #fff;
+  /* background: url(../images/flbtn-down.png) 42px 18px no-repeat; */
+  /*background: url(../images/btn2.png) 0 0 no-repeat;*/
+  font:normal 14px/51px "microsoft yahei";
+  text-align: center;
+  /* transition:all .7s ease; */
+  overflow: hidden;
+  background-color: #07a4b3;
+  cursor: pointer;
+}
+
+.flmenu .downbtn {
+  display: block;
+  margin-left: 30px;
+  width: 148px;
+  height: 45px;
+  position: absolute;
+  top: 65px;
+  opacity: 1;
+  background: url(../images/downbtns.png) no-repeat;
+}
+.flmenu .downbtn1 {
+  background-position: 0 0;
+  top: 119px;
+}
+.flmenu .downbtn2 {
+  background-position: 0 -50px;
+  top: 69px; 
+}
+.flmenu .downbtn3 {
+  background-position: 0 -101px;
+  top: 169px;
+}
+/* .flmenu .flduebtn:hover{
+  height: 225px;
+  transition:all .7s ease;
+} */
+.flmenu .flsocial{
+  display: block;
+  float: right;
+  margin:37px 29px 0 0 ;
+  width: 207px;
+  height: 34px;
+  background: url(../images/spirite.png) -387px 0px no-repeat;
+}
+@media screen and (max-width:1366px){
+  .flmenu .flsocial{
+    display: none;
+  }
+}
+.flmenu .flsocial .solink{
+  display: block;
+  float: left;
+  margin:0 11.5px 0 0;
+  width: 32px;
+  height: 32px;
+}
+.flmenu .flsocial .solinkqq{margin-right: 0;}
+
+
+.fldropdown{
+  /*display:none;*/
+  position: absolute;
+  top:109px;
+  /*top:67px;*/
+  /*left: -493px;*/
+  width: 100%;
+  /*width: 1920px;*/
+  /*height:162px;*/
+  height:0px;
+  background-color: #fff;
+  border-bottom: none;
+  overflow: hidden;
+  transition:all 0.5s ease;
+}
+.fldropdown.show{
+  height: 162px;
+  border-bottom: 1px solid #ddd;
+}
+/*.fldropdown.cur{
+  display:block;
+}*/
+.fldropdown .dropdown-cont{
+  margin:18px auto 0;
+  width: 1185px;
+  height: 121px;
+}
+
+.fldropdown .dropdown-cont .weixintxt{
+  float: left;
+  margin-top: 35px;
+  width: 20px;
+  height: 80px;
+  background: url(../images/spirite.png) -131px -91px no-repeat;
+}
+.fldropdown .dropdown-cont .weixinqrcode{
+  float: left;
+  width: 115px;
+  height: 115px;
+  background: url('../images/weixinqrcode.png') 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.fldropdown .dropdown-cont .hr{
+  float: left;
+  margin:0 30px;
+  width: 1px;
+  height: 121px;
+  background-color: #ddd;
+}
+
+.fldropdown .dropdown-cont .weibotxt{
+  float: left;
+  margin-top: 35px;
+  width: 20px;
+  height: 80px;
+  background: url('../images/spirite.png') -160px -91px no-repeat;
+}
+.fldropdown .dropdown-cont .weiboqrcode{
+  float: left;
+  width: 115px;
+  height: 115px;
+  background: url('../images/weiboqrcode.png') 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.fldropdown .dropdown-cont .socdiv{
+  float: left;
+  margin-left:74px;
+  width: 340px;
+  height: 90px;
+}
+.fldropdown .dropdown-cont .socdiv .solink{
+  margin:16px 67px 0 0;
+  float: left;
+}
+.fldropdown .dropdown-cont .socdiv .solink.tieba{
+  width: 69px;
+  height: 90px;
+  background: url(../images/spirite.png) -188px -93px no-repeat;
+}
+.fldropdown .dropdown-cont .socdiv .solink.weibo{
+  width: 69px;
+  height: 90px;
+  background: url(../images/spirite.png) -276px -93px no-repeat;
+}
+.fldropdown .dropdown-cont .socdiv .solink.qq{
+  margin-right: 0;
+  width: 60px;
+  height: 90px;
+  background: url(../images/spirite.png) -363px -93px no-repeat;
+}
+.fldropdown .dropdown-cont .qqgroup{
+  float: left;
+  margin-right: 10px;
+  width: 160px;
+  height: 105px;
+}
+.fldropdown .dropdown-cont .qqgroup p{
+  display: block;
+  font:normal 14px/28px "microsoft yahei";
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.fldropdown .dropdown-cont .qqgroup1{
+  margin-left: 40px;
+}
+
+._border_box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* 弹窗样式 */
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+}
+
+.popup>.wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.popup .layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup .close2 {
+    position: absolute;
+    right: -70px;
+    top: 0;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url("../images/close.png") 0 0 no-repeat;
+}
+
+#qrcode img {
+    display: block;
+    margin: 0 auto;
+    padding: 11px;
+    border: 1px solid #dfdfdf;
+    margin-top: 32px;
+}

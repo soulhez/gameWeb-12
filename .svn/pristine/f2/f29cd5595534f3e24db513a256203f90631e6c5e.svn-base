@@ -1,0 +1,200 @@
+@charset "utf-8";
+body {
+    font-family: "microsoft yahei";
+}
+
+.fn-contain {
+    overflow: hidden;
+    background: url('../images/bg.jpg') #060a0f no-repeat center top;
+    background-size: 100% auto;
+}
+
+.rx-topblack {
+    position: absolute;
+    top: 0;
+    left: -5.2rem;
+    width: 14rem;
+    height: 5rem;
+    background: url(../images/topblack.png) no-repeat;
+    background-size: 100% auto;
+}
+.android-box{
+    display: none;
+}
+.rx-tel {
+    /* display: none; */
+    position: absolute;
+    left: 50%;
+    margin-left: -3.1rem;
+    width: 6.2rem;
+    bottom: 5.8rem;
+}
+
+.rx-tel input {
+    display: block;
+    width: 100%;
+    height: 1.6rem;
+    border: solid 1px #afafaf;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #666;
+    border-radius: 0.8rem;
+}
+
+.rx-mi {
+    position: absolute;
+    bottom:3.5rem;
+    left: 50%;
+    margin-left: -3.25rem;
+    width: 6.5rem;
+    height: 2rem;
+    background: url(../images/mi.png) no-repeat center top;
+    background-size: 100% auto;
+}
+
+
+/* 预约成功 */
+
+.rx-success {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9;
+    border: solid 0.1rem #000;
+    display: none;
+}
+
+.rx-success .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(../images/success_close.png) no-repeat center center;
+    background-size: 100% auto;
+}
+
+.rx-success .wrap {
+    margin: auto;
+    width: 10rem;
+    padding-top: 1.6rem;
+}
+
+.rx-success .wrap>p {
+    text-align: center;
+}
+
+.rx-success .title {
+    text-align: center;
+    margin: auto;
+    font: bold 0.6rem/1.5 "microsoft yahei";
+    color: #9c0000;
+}
+
+.rx-success .line {
+    margin: 0.4rem auto;
+    width: 7rem;
+    height: 1px;
+    background-color: #cdcdcd;
+}
+
+.rx-success .text {
+    padding: 0;
+    text-align: center;
+    font-size: 0.36rem;
+    line-height: 1.7;
+    color: #000;
+}
+
+.rx-success .btn {
+    font-family: "microsoft yahei";
+    margin: 0.3rem auto;
+    width: 5rem;
+    line-height: 1.2rem;
+    border: solid 1px #000;
+    text-align: center;
+    color: #000;
+    font-size: 0.4rem;
+}
+
+.rx-success .qrcode {
+    margin: 0.3rem auto;
+    width: 3rem;
+}
+
+.rx-success .qrcode img {
+    display: block;
+    width: 100%;
+}
+
+.rx-success .qrtext, .rx-success .qrtext p {
+    font-size: 0.42rem;
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+.rx-success .qrtext p b {
+    color: #9c0000;
+}
+
+.ios-inp {
+    text-align: center;
+    width: 6.4rem;
+    height: 1.0rem;
+    line-height: .76rem;
+    border: none;
+    display: block;
+    left: 50%;
+    margin-left: -3.2rem;
+    border-radius: .8rem;
+}
+
+.ios-phone {
+    position: absolute;
+    bottom: 9.1rem;
+}
+
+.ios-email {
+    position: absolute;
+    bottom: 7.7rem;
+}
+
+.ios-type {
+    position: absolute;
+    -webkit-appearance: none;
+    background: url(../images/arr.jpg) 5.0rem center no-repeat #e7e6e6;
+    background-size: contain;
+    bottom: 5.8rem;
+    left: 50%;
+    text-indent: 1.3rem;
+    margin-left: -3.2rem;
+}
+
+.ios-type option {
+    text-align: center
+}
+.ios-box{
+    display: none;
+}
+.ios-box p {
+    width: 100%;
+    line-height: .3rem;
+    color: #fff;
+    font-size: .3rem;
+    position: absolute;
+    text-align: center;
+}
+
+.tip {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 5.4rem;
+    height: 2rem;
+    color: #fff;
+    text-shadow:1px 1px 0px #333;
+}

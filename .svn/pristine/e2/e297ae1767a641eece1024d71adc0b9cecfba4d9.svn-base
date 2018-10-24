@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>黎明陨落</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="freestore:type" content="webpage" />
+    <meta name="freestore:webpage:url" content="https://lm.woniu.com/m/static/act/201712/order/index.html" />
+    <meta name="freestore:webpage:title" content="黎明陨落--ARPG王者之作，现已破晓来袭！" />
+    <meta name="freestore:webpage:description" content="2018年必玩APRG手游-黎明陨落现已开发预约，拥有超强的打击感和完美的画面效果，丰富的交互玩法，带来顶级的游戏体验" />
+    <!-- <meta name="freestore:webpage:image" content="https://mjfy.woniu.com/m/static/201711/images/share_icon.jpg" /> -->
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/order.css" />
+    <script charset="utf-8" src="./js/zepto-1.2.0.min.js"></script>
+    <script charset="utf-8" src="//static.app1.snail.com/cms/web/res/core/app_interface.js"></script>
+</head>
+
+<body>
+    <div class="fn-contain">
+        <!-- <div class="rx-topblack"></div> -->
+        <div class="android-box">
+            <div class="rx-tel">
+                <input id="j-mobile" type="tel" maxlength="11" placeholder="请输入您的手机号">
+            </div>
+            <div class="rx-mi android-btn"></div>
+        </div>
+        <div class="ios-box">
+           <!--  <input type="tel" name="" maxlength="11" class="ios-inp ios-phone" placeholder="请输入您的手机号">
+            <input type="text" name="" class="ios-inp ios-email" placeholder="请输入电子邮箱">
+            <p class="tip">建议填写QQ邮箱，以便及时获取测试邀请信息</p>
+            <select class="ios-inp ios-type">
+					<option>请选择您的设备型号</option>
+					<option>iPhone6S</option>
+					<option>iPhone6</option>
+					<option>iPhoneSE</option>
+					<option>iPhone5S</option>
+					<option>iPadPro</option>
+					<option>iPadAir2</option>
+					<option>iPadMini4</option>
+					<option>iPadMini2</option>
+					<option>其他</option>
+				</select>
+            <div class="rx-mi ios-btn"></div> -->
+        </div>
+        <div class="rx-success">
+            <em class="close"></em>
+            <div class="wrap">
+                <div class="title">恭喜，您已成功预约！</div>
+                <div class="text">
+                    <p>扫码加入官方QQ群，更多精彩活动等着您</p>
+                    <p>更多游戏礼包和精美周边等你拿！</p>
+                </div>
+                <div class="line"></div>
+                <p>[长按识别二维码]</p>
+                <div class="qrcode">
+                    <img src="//lm.woniu.com/m/static/act/201712/order/images/qq.png">
+                </div>
+                <!-- <div class="text qrtext">
+                    <p>微信搜索“萌将风云”</p>
+                    <p>官方微信公众号：<b>snailmjfy</b></p>
+                    <p>获取官方最新动态</p>
+                </div> -->
+                <div class="j-share btn" style="display: none;">立即分享</div>
+            </div>
+        </div>
+    </div>
+    <script charset="utf-8" src="//static.woniu.com/script/mobile/base.js"></script>
+    <script charset="utf-8" src="//static.woniu.com/script/??/mobile/base.js,/mobile/sugar/sugar.js,/mobile/sugar/share/share-1.0.2.js"></script>
+    <script charset="utf-8" src="./js/order.js?v=0.2"></script>
+    <!-- <script type="text/javascript" src="//static.woniu.com/scripts/module/statistics/0.1/statistics.js"></script> -->
+</body>
+
+</html>

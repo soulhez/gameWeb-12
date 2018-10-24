@@ -1,0 +1,184 @@
+/*
+* author:minchao
+* date:20180615
+*/
+$(function(){
+
+    function deal(data){
+        var xinshou='';
+        var beijing ='';
+        var zongmen ='';
+        var renwu ='';
+        var richang ='';
+        var pvp ='';
+        var fuben ='';
+        var zhuangbei ='';
+        var zuoqi='';
+        var lingyao='';
+        var chibang='';
+        var fabao='';
+        var xianmeng='';
+        var shizhuang='';
+        var sanqiandaozang='';
+        var mingge='';
+
+        for(var i=0; i<data.length;i++){
+
+            if(data[i].grandpa=="新手上路"){
+                xinshou+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+
+            if(data[i].grandpa=="游戏背景"){
+                beijing+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+
+            if(data[i].grandpa=="宗门介绍"){
+                zongmen+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="任务介绍"){
+                renwu+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="日常介绍"){
+                richang+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+
+            if(data[i].grandpa=="PVP玩法"){
+                pvp+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="副本介绍"){
+                fuben+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="装备系统"){
+                zhuangbei+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="坐骑系统"){
+                zuoqi+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="灵妖系统"){
+                lingyao+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="翅膀系统"){
+                chibang+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="法宝系统"){
+                fabao+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="仙盟系统"){
+                xianmeng+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="时装系统"){
+                shizhuang+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="三千道藏"){
+                sanqiandaozang+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="命格系统"){
+                mingge+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+        }
+        $('#xinshou').html(xinshou);
+        $('#beijing').html(beijing);
+        $('#zongmen').html(zongmen);
+        $('#renwu').html(renwu);
+        $('#richang').html(richang);
+        $('#pvp').html(pvp);
+        $('#fuben').html(fuben);
+        $('#zhuangbei').html(zhuangbei);
+        $('#zuoqi').html(zuoqi);
+        $('#lingyao').html(lingyao);
+        $('#chibang').html(chibang);
+        $('#fabao').html(fabao);
+        $('#xianmeng').html(xianmeng);
+        $('#shizhuang').html(shizhuang);
+        $('#sanqiandaozang').html(sanqiandaozang);
+        $('#mingge').html(mingge);
+    }
+
+
+    $.ajax({
+        type:'GET',
+        url:'//jy2.woniu.com/data/',
+        dataType:'text',
+        success:function(data){
+            var data = eval('(' + data + ')');
+            console.log(data);
+            deal(data);
+        }
+    })
+
+    // $('.down_yuyue').click(function(){
+    //     console.log(1);
+    //     $('.maskdiv,.change-pop').show();
+    // })
+
+    /*顶部分享*/
+    $.wnshare({
+        'url':'http://jy2.woniu.com/static/info/',
+        'title':'《九阳神功2》手游官网-同名电视剧官方正版手游',
+        'desc':'《九阳神功2》手游官网-同名电视剧官方正版手游',
+        'pic':'http://jy2.woniu.com/static/web201712/images/share.jpg'
+    });
+
+
+    /*右侧关注微信*/
+    $('.sns .a1').hover(function(){
+        $(this).siblings('.wx_ewm').show();
+    },function(){
+        $(this).siblings('.wx_ewm').hide();
+    })
+
+    //预约
+    $(".change-submit").click(function() {
+            var phone = $(".cphone").val();
+            var mail = $(".mail").val();
+            if (!phone) {
+                alert("请填写手机号！");
+                return;
+            } else if (!mail) {
+                alert("请填写邮箱！");
+                return;
+            } else if (!system) {
+                alert('请选择设备型号！');
+                return;
+            } else {
+                var os = "ios";
+                $.ajax({
+                    type: "GET",
+                    url: "http://gwactv2.woniu.com/order/Appointment",
+                    data: {
+                        phone: phone,
+                        mail: mail,
+                        system: os,
+                        source:'-',
+                        model: system
+                    },
+                    dataType: "jsonp",
+                    jsonp: "jsoncallback",
+                    success: function(data) {
+                        submitbtnState = true;
+                        if (data.msgcode == 1) {
+                            $(".change-box .iosbox").html('<div class="yysuccess"><h2>恭喜您！预约成功！</h2><p>现在关注"黑暗与光明手游"官方微信公众号，前往填写问卷赢好礼，游戏礼包和精美周边等你拿！</p><img src="http://t.woniu.com/static/web201612/images/weixin-qrcode.png" alt=""/>微信搜索公众号（<i class="red">snailt</i>）<br/>或“黑暗与光明手游”</div><p class="p">加入官方QQ群:<b style="color:red">371424062 </b>，优先获测试资格 </p>');
+                        } else {
+                            alert(data.msg);
+                        }
+                    }
+                });
+            }
+        })
+
+    //立即预约
+    $(".ljyy").click(function() {
+            $(".change-pop , .maskdiv").fadeIn();
+        })
+        // 预约弹窗切换
+    $(".change-menu p").click(function() {
+        $(".change-menu p").removeClass("current");
+        $(this).addClass("current");
+        var index = $(this).index();
+        $(".change-box .cbox").hide();
+        $(".change-box .cbox").eq(index).show();
+    })
+    $('.gift').click(function() {
+        $('.maskdiv,.reward').fadeIn()
+    });
+})

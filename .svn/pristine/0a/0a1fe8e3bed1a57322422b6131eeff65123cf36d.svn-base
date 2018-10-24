@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>九阳神功2--3DMMO武侠手游</title>
+    <meta name="keywords" content="九阳、九阳神功、九阳神功2、武侠、九阳预约、九阳神功2官网、蜗牛、蜗牛游戏、蜗牛九阳、九阳神功2好玩吗、官网、蜗牛预约、硬派武侠、3D武侠手游、主机工艺、自由江湖" />
+    <meta name="description" content="《九阳神功2》是蜗牛数字以主机工艺为标准， 使用最新Unity5引擎打造的一款殿堂级3D动作MMO武侠手游！游戏以创新性的交互模式、电影级的美术画质、端游档次的世界地图为玩家打造前所未有的手游体验。游戏采用开放性格养成，正邪随心，尽显侠之本色；自由冒险奇遇，快意恩仇，再现经典武林。五大职业重出江湖，自创武学开宗立派、千人血战尔虞我诈，丰富自由的玩法，拳拳到肉的打击感，带你领略最真实的江湖纷争！" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="freestore:type" content="webpage" />
+    <meta name="freestore:webpage:url" content="https://jy2.woniu.com/m/static/web201804/mian/index.html" />
+    <meta name="freestore:webpage:title" content="九阳神功2--3DMMO武侠手游" />
+    <meta name="freestore:webpage:description" content="《九阳神功2》--主机工艺3D动作MMO武侠手游" />
+    <meta name="freestore:webpage:image" content="https://jy2.woniu.com/static/web201804/images/share.jpg" />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/order.css" />
+    <script charset="utf-8" src="./js/zepto-1.2.0.min.js"></script>
+    <script charset="utf-8" src="//static.app1.snail.com/cms/web/res/core/app_interface.js"></script>
+</head>
+
+<body>
+    <div class="fn-contain">
+        <!-- <div class="rx-topblack"></div> -->
+        <div class="android-box">
+            <div class="rx-tel">
+                <input id="j-mobile" type="tel" maxlength="11" placeholder="请输入您的手机号">
+            </div>
+            <div class="rx-mi android-btn"></div>
+        </div>
+        <div class="ios-box">
+           <!--  <input type="tel" name="" maxlength="11" class="ios-inp ios-phone" placeholder="请输入您的手机号">
+            <input type="text" name="" class="ios-inp ios-email" placeholder="请输入电子邮箱">
+            <p class="tip">建议填写QQ邮箱，以便及时获取测试邀请信息</p>
+            <select class="ios-inp ios-type">
+					<option>请选择您的设备型号</option>
+					<option>iPhone6S</option>
+					<option>iPhone6</option>
+					<option>iPhoneSE</option>
+					<option>iPhone5S</option>
+					<option>iPadPro</option>
+					<option>iPadAir2</option>
+					<option>iPadMini4</option>
+					<option>iPadMini2</option>
+					<option>其他</option>
+				</select>
+            <div class="rx-mi ios-btn"></div> -->
+        </div>
+        <div class="rx-success">
+            <em class="close"></em>
+            <div class="wrap">
+                <div class="title">恭喜，您已成功预约！</div>
+                <div class="text">
+                    <p>更多资讯，请关注“九阳神功2”官方Q群，</p>
+                    <p>优先领取测试资格，更有海量福利等你拿！</p>
+                </div>
+                <div class="line"></div>
+                <p>[长按识别二维码]</p>
+                <div class="qrcode">
+                    <img src="//jy2.woniu.com/m/static/web201804/images/qrcode.jpg">
+                </div>
+                <!-- <div class="text qrtext">
+                    <p>微信搜索“求生：英雄峡谷”</p>
+                    <p>官方微信公众号：<b>snail-qiusheng</b></p>
+                    <p>获取官方最新动态</p>
+                </div> -->
+                <div class="j-share btn" style="display: none;">立即分享</div>
+            </div>
+        </div>
+    </div>
+    <script charset="utf-8" src="//static.woniu.com/script/mobile/base.js"></script>
+    <script charset="utf-8" src="//static.woniu.com/script/??/mobile/base.js,/mobile/sugar/sugar.js,/mobile/sugar/share/share-1.0.2.js"></script>
+    <script charset="utf-8" src="./js/order.js?v=0.2"></script>
+    <!-- <script type="text/javascript" src="//static.woniu.com/scripts/module/statistics/0.1/statistics.js"></script> -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?9aa3c6faca7a4f94b791b5083ce42f96";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+
+</html>

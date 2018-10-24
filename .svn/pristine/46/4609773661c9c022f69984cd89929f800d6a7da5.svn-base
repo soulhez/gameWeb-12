@@ -1,0 +1,134 @@
+//预注册弹框popup-pre
+(function () {
+  var $ios = $('.ios'),
+  $pop = $('.pop'),
+  $apt = $('#apt'),
+  $mnue = $('.mnue'),
+  $success = $('.success');
+  var system = '';
+  //判断操作系统
+  var browser = {
+      versions: function() {
+          var u = navigator.userAgent,
+              app = navigator.appVersion;
+          return { //移动终端浏览器版本信息
+              ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+              android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+              iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+              iPad: u.indexOf('iPad') > -1 //是否iPad
+          };
+      }()
+  };
+    
+    if (browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
+        $('#iosBtns').fadeIn();
+    } else {
+        $('#androidBtns').fadeIn();
+        $('#androidBtns').addClass("androidBtns-top");
+         $('.slogan').addClass("slogan-top");
+    }
+
+
+  $('#device span').click(function() {
+      if ($('.device-list').hasClass('show')) {
+          $('.device-list').removeClass('show');
+      } else {
+          $('.device-list').addClass('show');
+      }
+  });
+  $('.device-list ul li').click(function() {
+      system = $(this).text();
+      $('#device span').html(system);
+      $('.device-list').removeClass('show');
+  });
+  $('.device-list ul li').click(function() {
+      system = $(this).text();
+      $('#device span').html(system);
+      $('.device-list').removeClass('show');
+  });
+  //预约
+  $('#pre-btn,#duebtn-btm-ios,#duebtnflnav-ios').on('click', function() {
+      if (browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
+          $('#pre-ios').fadeIn();
+      } else {
+          $('#pre-android').fadeIn();
+      }
+      // window.location.href = '//wdkl.woniu.com/m/static/mob/';
+  });
+
+  //社群
+  // $('.commu, .sharelink.weixin').on('click', function() {
+  //     $('.popsns').fadeIn();
+  // })
+
+
+  //菜单
+  $('.topnav, .morenav ').on('click', function() {
+      $('.menu').fadeIn();
+  })
+
+  //ios预约
+  var submitbtnState = null;
+  $('#j-order').on('click', function() {
+      if (submitbtnState) {
+          return;
+      }
+      var $go_apt = $('.go-apt'),
+      reg= /^[1][0-9]\d{9}$/,
+      m_reg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+      
+      
+      var phone = $('#phone').val(),
+          mail = $('#mail').val(),
+          sys = $.trim($('#device span').html());
+
+      if(!reg.test(phone)||phone == null){
+          alert("请输入正确的手机号！");
+          return false;
+      };
+      if (!m_reg.test(mail)||mail == null) {
+          alert("请输入正确的邮箱！");
+          return false;
+      };
+      if (sys == "请选择您的设备型号"||sys == null) {
+          alert("请选择您的设备型号！");
+          return false;
+      };
+      submitbtnState = true;
+      $.ajax({
+          url: '//gwactv2.woniu.com/order/Appointment',
+          type: 'get',
+          dataType: 'jsonp',
+          jsonp: 'jsoncallback',
+          data: {
+              phone: phone,
+              mail: mail,
+              system: 'ios',
+              model: sys.replace(/\s+/g, ''),
+              source: window.location.origin
+          },
+          success: function(data){
+              submitbtnState = null;
+              if (data.msgcode == 1) {
+                  $ios.fadeOut('fast', function() {
+                      $success.fadeIn();
+                  });
+              }else{
+                  alert(data.msg);
+              }
+          }
+      })
+  });
+
+  $('.close').click(function () {
+      hide($('.pop'));
+  });
+
+})();
+
+function show(ele){
+  ele.show();
+}
+function hide(ele){
+  ele.hide();
+}

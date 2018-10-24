@@ -1,0 +1,393 @@
+/*
+   f2e:cuixin
+   date:2016-08-08
+*/
+
+$(function(){
+  $("html").css("fontSize","75px");
+//   var temp = '<a href="${url}">${title}</a>';
+//   var linktemp = '<a href="${url}">${name}</a>';
+
+    function deal(data){
+        var xinshou='';
+        var beijing ='';
+        var zongmen ='';
+        var renwu ='';
+        var richang ='';
+        var pvp ='';
+        var fuben ='';
+        var zhuangbei ='';
+        var zuoqi='';
+        var lingyao='';
+        var chibang='';
+        var fabao='';
+        var xianmeng='';
+        var shizhuang='';
+        var sanqiandaozang='';
+        var mingge='';
+
+        for(var i=0; i<data.length;i++){
+
+            if(data[i].grandpa=="新手上路"){
+                xinshou+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+
+            if(data[i].grandpa=="游戏背景"){
+                beijing+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+
+            if(data[i].grandpa=="宗门介绍"){
+                zongmen+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="任务介绍"){
+                renwu+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="日常介绍"){
+                richang+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+
+            if(data[i].grandpa=="PVP玩法"){
+                pvp+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="副本介绍"){
+                fuben+='<a href="'+data[i].url+'" >'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="装备系统"){
+                zhuangbei+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="坐骑系统"){
+                zuoqi+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="灵妖系统"){
+                lingyao+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="翅膀系统"){
+                chibang+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="法宝系统"){
+                fabao+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="仙盟系统"){
+                xianmeng+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="时装系统"){
+                shizhuang+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="三千道藏"){
+                sanqiandaozang+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+            if(data[i].grandpa=="命格系统"){
+                mingge+='<a href="'+data[i].url+'">'+data[i].title+'</a>'
+            }
+        }
+        $('#xinshou').html(xinshou);
+        $('#beijing').html(beijing);
+        $('#zongmen').html(zongmen);
+        $('#renwu').html(renwu);
+        $('#richang').html(richang);
+        $('#pvp').html(pvp);
+        $('#fuben').html(fuben);
+        $('#zhuangbei').html(zhuangbei);
+        $('#zuoqi').html(zuoqi);
+        $('#lingyao').html(lingyao);
+        $('#chibang').html(chibang);
+        $('#fabao').html(fabao);
+        $('#xianmeng').html(xianmeng);
+        $('#shizhuang').html(shizhuang);
+        $('#sanqiandaozang').html(sanqiandaozang);
+        $('#mingge').html(mingge);
+    }
+
+    $.ajax({
+        type:'GET',
+        url:'//jy2.woniu.com/m/data/',
+        dataType:'json',
+        success:function(data){
+          console.log(data);
+            deal(data);
+        
+        }
+    });
+
+    $(".zl-hd-more").click(function(){
+        $(".hd-nav").show();
+        $(".maskdiv1").show().css("opacity","0");
+    })
+    $(".zl-warp").on('click', '.maskdiv1', function(event) {
+            event.preventDefault();
+            $(".maskdiv1,.hd-nav").hide();
+    });
+   
+   //新闻折叠
+    $(".zl-list-tit").click(function(){
+        var ls = $(this).attr("data-zt");
+        if(ls == 1){
+            $(this).siblings().fadeIn();
+            $(this).attr("data-zt","2").addClass("zl-list-tit2");
+            $(this).find("b").addClass("xjt");
+        }else{
+            $(this).siblings().fadeOut();
+            $(this).attr("data-zt","1").removeClass("zl-list-tit2");
+            $(this).find("b").removeClass("xjt");
+        }
+    })
+  //微信
+    $(".fl-sq .weixin").click(function(){
+        $(".ewm , .maskdiv").show();
+    })
+    $(".close").click(function(){
+        $(".zl-pop , .maskdiv").hide();
+    })
+
+
+//share
+;(function () {
+    var url = window.location.href;
+    var oShareBox = $('#shareBox');
+    var oPopup_sns = $('#popup-sns');
+    var oPopup_sns_close = oPopup_sns.find('.close');
+    var oFollow_weixin_btn = oPopup_sns.find('.weixin-box .weixin');
+    var oFollow_qrcode = oPopup_sns.find('.follow .qrcode');
+    var oFollow_qrcode_close = oPopup_sns.find('.follow .qrcode .close');
+    var oShare_btn = oPopup_sns.find('.share-btn');
+    var oCom_layer = $('#com-layer');
+    var oShare_weixin_btn = oShareBox.find('.weixin');
+    var oShare_weixin = oShareBox.find('.weixin-share');
+    var isWeixinLayerShow=false;
+    var oShare_weixin1 = oShareBox.find('.weixin-share1');
+    var oShare_weixin1_close = oShare_weixin1.find('.close');
+
+    $('.commu,.sharelink.weixin').click(function () {
+        // console.log('commu click');
+        show(oPopup_sns);
+    });
+    $('.linkonesocial').click(function(){
+        show(oPopup_sns);
+        $('.headslidenav').hide();
+    })
+    oPopup_sns_close.click(function () {
+        hide(oPopup_sns);
+    });
+    $('#shareBox .layer').click(function () {
+        hide(oShareBox);
+        if(isWeixinLayerShow) {
+            hide(oShare_weixin);
+            isWeixinLayerShow=false;
+        }
+    });
+    $('#shareBox .close').click(function () {
+        oShareBox.fadeOut();
+    });
+    //share
+    oShare_btn.click(function () {
+        show(oShareBox);
+        hide(oPopup_sns);
+    });
+    $('.zl-share').click(function () {
+        show(oShareBox);
+        hide(oPopup_sns);
+    });
+    oCom_layer.click(function () {
+        hide(oShareBox);
+    });
+    oShare_weixin_btn.click(function () {
+        if (is_weixn()) {
+            show(oShare_weixin);
+            isWeixinLayerShow=true;
+        } else {
+            show(oShare_weixin1);
+        }
+    });
+    oShare_weixin.click(function(){
+        hide(oShare_weixin);
+    });
+    oShare_weixin1_close.click(function () {
+        hide(oShare_weixin1);
+    });
+    oFollow_weixin_btn.click(function () {
+        show(oFollow_qrcode);
+    });
+    oFollow_qrcode_close.click(function () {
+        hide(oFollow_qrcod);
+    });
+    function is_weixn() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    var shareconf = {
+        title: '《九阳神功2》手游官网-同名电视剧官方正版手游',
+        url: url,
+        desc: '《九阳神功2》手游官网-同名电视剧官方正版手游',
+        pic: 'http://jy2.woniu.com/static/web201712/images/share.jpg'
+    };
+    var qzone = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(shareconf.url) + '&title=' + shareconf.title + '&pics=' + shareconf.pic + '&summary=' + shareconf.desc;
+
+    var sinaurl = 'http://service.weibo.com/share/share.php?title=' + shareconf.desc + '&url=' + encodeURIComponent(shareconf.url) + '&source=bookmark&pic=' + shareconf.pic;
+
+    var qqurl = 'http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(shareconf.url) + '&desc=' + shareconf.desc + '&title=' + shareconf.title + '&summary=&pics=' + shareconf.pic + '&flash=&site=&style=201&width=32&height=32&showcount=';
+
+    $('#shareBox .weibo').attr('href', sinaurl);
+    $('#shareBox .qq').attr('href', qqurl);
+    $('#shareBox .qqz').attr('href', qzone);
+
+    function show(ele){
+        console.log(ele);
+        ele.show();
+    }
+    function hide(ele){
+        ele.hide();
+    }
+})();
+
+
+
+
+  //判断操作系统
+  var browser = {
+    versions: function() {
+      var u = navigator.userAgent,
+        app = navigator.appVersion;
+      return { //移动终端浏览器版本信息
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+        iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+        iPad: u.indexOf('iPad') > -1, //是否iPad
+      };
+    }(),
+  }
+  if (browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
+    $('.md-top .ios-btn').show();
+    $('.md-top .android-btn').hide();
+  }
+  if (browser.versions.android) {
+    $('.md-top .ios-btn').hide();
+    $('.md-top .android-btn').show();
+  }
+
+  //下载
+  // $('.md-top .download').on('click',function(){
+  //   window.open($(this).attr('data-href'));
+  // });
+
+});
+
+
+
+
+//预注册弹框popup-pre
+(function () {
+    //预约按钮
+    $('.yuyue-dl-btn').on('click', function() {
+        if (browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
+            // $('#pre-ios').fadeIn();
+            location.href = "http://gwact.woniu.com/api/channel/598";
+        } else {
+            // location.href = "http://gwact.woniu.com/api/channel/598";
+            $('#pre-android').fadeIn();
+        }
+    });
+
+
+    var system = '';
+    //判断操作系统
+    var browser = {
+        versions: function() {
+            var u = navigator.userAgent,
+                app = navigator.appVersion;
+            return { //移动终端浏览器版本信息
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1 //是否iPad
+            };
+        }()
+    };
+
+    $('#device span').click(function() {
+        if ($('.device-list').hasClass('show')) {
+            $('.device-list').removeClass('show');
+        } else {
+            $('.device-list').addClass('show');
+        }
+    });
+    $('.device-list ul li').click(function() {
+        system = $(this).text();
+        $('#device span').html(system);
+        $('.device-list').removeClass('show');
+    });
+    $('.device-list ul li').click(function() {
+        system = $(this).text();
+        $('#device span').html(system);
+        $('.device-list').removeClass('show');
+    });
+    
+
+    //ios预约
+    var submitbtnState = true;
+    $('#j-order').on('click', function() {
+        if (submitbtnState) {
+            submitbtnState = false;
+            var mobile = $('#j-tel').val();
+            var mail = $('#j-email').val();
+            if (!mobile) {
+                alert('请输入手机号码！');
+                submitbtnState = true;
+                return false;
+            }
+            if(!system){
+                alert('请选择设备型号！');
+                submitbtnState = true;
+                return false;
+            }
+            if (!mail) {
+                alert('请输邮箱号码！');
+                submitbtnState = true;
+                return false;
+            }
+            $.ajax({
+                type: "GET",
+                url: "//gwactv2.woniu.com/panda3/h161207/yuyue",
+                data: {
+                    mobile_num: mobile,
+                    mobile_email: mail,
+                    mobile_type: 'ios',
+                    mobile_model:system
+                },
+                dataType: "jsonp",
+                jsonp: "jsoncallback",
+                success: function(data) {
+                    submitbtnState = true;
+                    if (data.msgcode == 1) {
+                        $("#pre-ios .title").text('恭喜您完成预约');
+                        $("#pre-ios .intro").text('更多资讯内容请关注《太极熊猫3：猎龙》官网微信号，填写调查问卷赢好礼，游戏礼包和精美周边等你拿！');
+                        $("#pre-ios .order").hide();
+                        $("#pre-ios .yysuccess").show();
+                    } else if (data.msgcode == 1001) {
+                        alert(data.msg);
+                        $('#pre-ios').hide();
+                    } else {
+                        alert(data.msg);
+                    }
+                }
+            });
+        }
+    });
+
+    $('#pre-ios .close').click(function () {
+        hide($('#pre-ios'));
+    });
+    $('#pre-android .close').click(function () {
+        hide($('#pre-android'));
+    });
+})();
+function show(ele){
+    ele.fadeIn();
+}
+function hide(ele){
+    ele.fadeOut();
+}

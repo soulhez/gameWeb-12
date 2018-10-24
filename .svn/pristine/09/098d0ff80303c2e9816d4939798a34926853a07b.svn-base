@@ -1,0 +1,331 @@
+// VSCODE安装Easy LESS 插件可自动将LESS压缩成css
+// 插件配置：
+// "less.compile": {
+//   "compress": true, // true => remove surplus whitespace
+//   "sourceMap": false, // true => generate source maps (.css.map files)
+//   "out": true // false => DON'T output .css files (overridable per-file, see below)
+// },
+
+@text: "Microsoft YaHei", Tahoma, sans-serif, Verdana, Helvetica, Arial, "돋움";
+
+.-text-height(@h){
+  height: @h; line-height: @h;
+}
+
+.-translate(@x,@y){
+  transform: translate(@x,@y);
+  -ms-transform: translate(@x,@y);		/* IE 9 */
+  -webkit-transform: translate(@x,@y);	/* Safari and Chrome */
+  -o-transform: translate(@x,@y);		/* Opera */
+  -moz-transform: translate(@x,@y);		/* Firefox */
+}
+
+.-translateY(@y){
+  transform: translateY(@y);
+  -ms-transform: translateY(@y);		/* IE 9 */
+  -webkit-transform: translateY(@y);	/* Safari and Chrome */
+  -o-transform: translateY(@y);		/* Opera */
+  -moz-transform: translateY(@y);		/* Firefox */
+}
+
+*{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-overflow-scrolling:touch;
+}
+
+._border_box{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+// Grayscale
+@gray-darker: lighten(#000, 13.5%); // #222
+
+@gray-dark: lighten(#000, 20%); // #333
+@gray: lighten(#000, 40%); // #666
+@gray-light: lighten(#000, 59.3%); // #979797
+@gray-lighter: lighten(#000, 93.5%); // #eee
+
+@line: #ffffff;
+@body-background: #f6f8fb; //分割模块底色
+@white-text: #cccccc; //按钮上的文字
+@main-color: #0b2524;
+@bg-dark: #15161a;
+@text-orange: @main-color;
+
+a{
+  color: @main-color;
+  text-decoration: none;
+}
+
+dl, dt, dd{
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.entend-click() {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+.be-center() {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.setBg(@url) {
+  background: url(@url) no-repeat;
+  background-size: 100%;
+}
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.border-bottom-1px(@color) {
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid @color;
+    content: ' ';
+  }
+}
+
+.flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.none{
+  display: none;
+}
+
+
+//清除浮动
+._clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+a.link{
+  display: inline-block;
+  font-size: 14px;
+}
+
+.main{
+  position: relative;
+  width: 100%;
+}
+
+.bg{
+  position: relative;
+  width: 100%;
+  min-width: 1000px;
+  height: 1080px;
+  background: url('../images/bg.jpg') center 50% no-repeat;
+  overflow: hidden;
+  .wrapper{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -140px;
+    width: 695px;
+    text-align: center;
+    // background: rgba(0,0,0,0.5);
+    .logo-wrapper{
+      .center-block;
+      text-align: center;
+      .icon{
+        display: inline-block;
+        margin-right: 20px;
+        width: 123px;
+        height: 124px;
+        background: url('../images/icon.png') no-repeat;
+        background-size: 100%;
+      }
+      .logo{
+        display: inline-block;
+        width: 252px;
+        height: 138px;
+        background: url('../images/logo.png') no-repeat;
+        background-size: 100%;
+      }
+    }
+    .slogan{
+      .center-block;
+      margin-top: 20px;
+      width: 621px;
+      height: 319px;
+      background: url('../images/slogan.png') no-repeat;
+      background-size: 100%;
+    }
+    .btn-wrapper{
+      margin-top: 30px;
+    }
+    .btn{
+      display: inline-block;
+      width: 306px;
+      height: 67px;
+      opacity: .9;
+      cursor: pointer;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    .apt-btn{
+      background: url('../images/btn-book.png') no-repeat;
+      background-size: 100%;
+    }
+    .taptap{
+      margin-left: 20px;
+      background: url('../images/taptap.png') no-repeat;
+      background-size: 100%;
+    }
+    .qr-bg{
+      position: relative;
+      display: inline-block;
+      width: 135px;
+      height: 115px;
+      background: url('../images/qr-bg.png') no-repeat;
+      background-size: 100%;
+      img{
+        display: block;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        width: 110px;
+        height: 110px;
+      }
+    }
+    .android-download{
+      display: inline-block;
+      margin-left: 20px;
+      width: 115px;
+      height: 115px;
+      background: url('../images/android-download.png') no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+.nav{
+  position: absolute;
+  left: 0;
+  right: 20px;
+  height: 65px;
+  ._clearfix();
+  text-align: right;
+  z-index: 10;
+  .links{
+    margin-top: 16px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    .wx, .weibo, .tieba, .qq, .sharemore{
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      background: url('../images/head-icons.png') no-repeat;
+      opacity: 0.8;
+    }
+    .wx{
+      background-position: -39px 2px;
+      .weixin-qrcode{
+        display: none;
+        position: absolute;
+        right: -45px;
+        bottom: -126px;
+        width: 120px;
+        height: 120px;
+      }
+      &:hover{
+        .weixin-qrcode{
+          display: block;
+        }
+      }
+    }
+    .weibo{
+      background-position: -74px 2px;
+    }
+    .tieba{
+      background-position: -110px 2px;
+    }
+    .qq{
+      background-position: -146px 2px;
+    }
+    .sharemore{
+      background-position: -184px 2px;
+      &:hover {
+        .sharelink-more-box {
+          display: block;
+        }
+      }
+    }
+    .weibo:hover, .tieba:hover, .qq:hover, .sharemore:hover{
+      opacity: 1;
+    }
+    .sharelink-more-box {
+      width: 34px;
+      height: 142px;
+      background: url('../images/s_down.png') center no-repeat;
+      position: absolute;
+      top: 40px;
+      left: 4px;
+      display: none;
+      transition: all 0.7s ease;
+      -webkit-transition: all 0.7s ease;
+      .more {
+        width: 34px;
+        height: 34px;
+        display: block;
+        margin-bottom: 2px;
+      }
+    }
+  }
+  .tabs{
+    float: right;
+    ._clearfix();
+    .tab{
+      display: inline-block;
+      margin-right: 20px;
+      width: 65px;
+      height: 65px;
+      background: url(../images/navs.png) -4px 0 no-repeat;
+    }
+    .fp1{
+      background-position: -4px 0;
+    }
+    .fp2{
+      background-position: -119px 0;
+    }
+    .fp3{
+      background-position: -226px 0;
+    }
+  }
+}

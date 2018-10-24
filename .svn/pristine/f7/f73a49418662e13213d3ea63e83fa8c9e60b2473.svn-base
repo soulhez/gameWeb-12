@@ -1,0 +1,321 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-overflow-scrolling: touch
+}
+
+._border_box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+a {
+    color: #0b2524;
+    text-decoration: none
+}
+
+dl,dt,dd {
+    padding-left: 0;
+    margin-left: 0
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+
+.none {
+    display: none
+}
+
+a.link {
+    display: inline-block;
+    font-size: 14px
+}
+
+.main {
+    position: relative;
+    width: 100%
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    min-width: 1000px;
+    height: 1080px;
+    background: url('../images/bg.jpg') center 50% no-repeat;
+    overflow: hidden
+}
+
+.bg .wrapper {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -140px;
+    width: 695px;
+    text-align: center
+}
+
+.bg .wrapper .logo-wrapper {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center
+}
+
+.bg .wrapper .logo-wrapper .icon {
+    display: inline-block;
+    margin-right: 20px;
+    width: 123px;
+    height: 124px;
+    background: url('../images/icon.png') no-repeat;
+    background-size: 100%
+}
+
+.bg .wrapper .logo-wrapper .logo {
+    display: inline-block;
+    width: 252px;
+    height: 138px;
+    background: url('../images/logo.png') no-repeat;
+    background-size: 100%
+}
+
+.bg .wrapper .slogan {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 621px;
+    height: 349px;
+    background: url('../images/slogan.png') no-repeat;
+    background-size: 100%
+}
+
+.bg .wrapper .btn-wrapper {
+    margin:30px auto;
+}
+
+.bg .wrapper .btn {
+    display: inline-block;
+    width: 306px;
+    height: 67px;
+    opacity: .9;
+    cursor: pointer
+}
+
+.bg .wrapper .btn:hover {
+    opacity: 1
+}
+
+.bg .wrapper .apt-btn {
+    background: url('../images/btn-book.png') no-repeat;
+    background-size: 100%
+}
+
+.bg .wrapper .taptap {
+    margin-left: 20px;
+    background: url('../images/taptap.png') no-repeat;
+    background-size: 100%
+}
+
+.bg .btn-wrapper{
+    padding: 10px;
+    width: 403px;
+    height: 181px;
+        background: url('../images/warp-bg.png') no-repeat;
+    background-size: 100%;
+}
+
+.bg .wrapper .qr-bg ,.bg .wrapper .download-bg{
+     display: inline-block;
+}
+
+.bg .wrapper .qr-bg {
+    width: 135px;
+    height: 150px;
+}
+
+
+.bg .wrapper .qr-bg .word
+{
+    width: 107px;
+    height: 11px;
+    margin-bottom: 5px;
+}
+
+.bg .wrapper .qr-bg .erweima {
+    width: 128px;
+    height: 126px
+}
+
+.bg .wrapper .iOS-download,.bg .wrapper .android-download {
+    display: block;
+    margin-left: 20px;
+    width: 220px;
+    height: 66px;
+    margin-top: 10px;
+    background-size: 100%
+}
+
+.bg .wrapper .iOS-download
+ {
+    background: url('../images/iOS.png') no-repeat;
+}
+
+.bg .wrapper .android-download{
+    background: url('../images/android.png') no-repeat;
+    margin-top: 20px;
+}
+  
+
+.nav {
+    position: absolute;
+    left: 0;
+    right: 20px;
+    height: 65px;
+    *zoom:1;text-align: right;
+    z-index: 10
+}
+
+.nav:before,.nav:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.nav:after {
+    clear: both
+}
+
+.nav .links {
+    margin-top: 16px;
+    height: 40px;
+    line-height: 40px;
+    float: right
+}
+
+.nav .links .wx,.nav .links .weibo,.nav .links .tieba,.nav .links .qq,.nav .links .sharemore {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url('../images/head-icons.png') no-repeat;
+    opacity: .8
+}
+
+.nav .links .text {
+    position: relative;
+    width: 107px;
+    height: 28px;
+    margin-top:6px;
+    display: inline-block;
+    background: url('../images/luntan.png') no-repeat;
+    opacity: .8
+}
+
+
+.nav .links .wx {
+    background-position: -39px 2px
+}
+
+.nav .links .wx .weixin-qrcode {
+    display: none;
+    position: absolute;
+    right: -45px;
+    bottom: -126px;
+    width: 120px;
+    height: 120px
+}
+
+.nav .links .wx:hover .weixin-qrcode {
+    display: block
+}
+
+.nav .links .weixin {
+    background-position: -74px 2px
+}
+
+.nav .links .weibo {
+    background-position: -74px 2px
+}
+
+.nav .links .tieba {
+    background-position: -110px 2px
+}
+
+.nav .links .qq {
+    background-position: -146px 2px
+}
+
+.nav .links .sharemore {
+    background-position: -184px 2px
+}
+
+.nav .links .sharemore:hover .sharelink-more-box {
+    display: block
+}
+
+.nav .links .weibo:hover,.nav .links .tieba:hover,.nav .links .qq:hover,.nav .links .sharemore:hover {
+    opacity: 1
+}
+
+.nav .links .sharelink-more-box {
+    width: 34px;
+    height: 142px;
+    background: url('../images/s_down.png') center no-repeat;
+    position: absolute;
+    top: 40px;
+    left: 4px;
+    display: none;
+    transition: all .7s ease;
+    -webkit-transition: all .7s ease
+}
+
+.nav .links .sharelink-more-box .more {
+    width: 34px;
+    height: 34px;
+    display: block;
+    margin-bottom: 2px
+}
+
+.nav .tabs {
+    float: right;
+    *zoom:1}
+
+.nav .tabs:before,.nav .tabs:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.nav .tabs:after {
+    clear: both
+}
+
+.nav .tabs .tab {
+    display: inline-block;
+    margin-right: 20px;
+    width: 65px;
+    height: 65px;
+    background: url(../images/navs.png) -4px 0 no-repeat
+}
+
+.nav .tabs .fp1 {
+    background-position: -4px 0
+}
+
+.nav .tabs .fp2 {
+    background-position: -119px 0
+}
+
+.nav .tabs .fp3 {
+    background-position: -226px 0
+}

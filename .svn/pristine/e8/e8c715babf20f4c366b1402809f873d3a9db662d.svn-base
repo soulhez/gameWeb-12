@@ -1,0 +1,132 @@
+// $('.fn-contain,.android-box,.ios-box').height($(window).height());
+window.onload = function() {
+    setTimeout(function() {
+        $('.fn-contain,.android-box,.ios-box').height($(window).height());
+    }, 10);
+};
+
+$('.fn-contain').on(touchmove, function() {
+    return false;
+});
+
+
+if (/iphone|ipod|ipad|itouch/i.test(navigator.userAgent)) {
+    var os = 'ios';
+    $('.ios-box').html('<input type="tel" name="" maxlength="11" class="ios-inp ios-phone" placeholder="请输入您的手机号"><input type="text" name="" class="ios-inp ios-email" placeholder="请输入电子邮箱"><p class="tip">建议填写QQ邮箱，以便及时获取测试邀请信息</p><select class="ios-inp ios-type"><option>请选择您的设备型号</option><option>iPhoneX</option><option>iPhone8 plus</option><option>iPhone8</option><option>iPhone7 plus</option><option>iPhone7</option><option>iPhone6S plus</option><option>iPhone6S</option><option>iPhone6 plus</option><option>iPhone6</option><option>iPhoneSE</option><option>iPhone5S</option><option>iPadPro</option><option>iPadAir2</option><option>iPadMini4</option><option>iPadMini2</option><option>其他</option></select><div class="rx-mi ios-btn"></div>').show();
+    $('.android-box').hide();
+    $('.ios-box').show();
+} else {
+    var os = 'android';
+    $('.android-box').show();
+    $('.ios-box').hide();
+}
+
+var submitFlag = null;
+$('.ios-btn').on('click', function() {
+    if (submitFlag) {
+        return;
+    }
+    var mobile = $('.ios-phone').val(),
+        email = $('.ios-email').val(),
+        model = $('.ios-type').val();
+    if (!mobile) {
+        alert('请输入手机号');
+        return false;
+    } else if (!email) {
+        alert('请输入邮箱');
+        return false;
+    } else if (!(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(email))) {
+        alert('请输入正确的邮箱格式');
+        return false;
+    } else if (model == '请选择您的设备型号') {
+        alert('请选择手机型号');
+        return false;
+    } else if (!(/^1[3-8]{1}[0-9]{9}$/.test(mobile))) {
+        alert('请输入正确的手机号码');
+        return false;
+    }
+
+    submitFlag = true;
+    $.ajax({
+        type: "GET",
+        url: "//gwactv2.woniu.com/order/Appointment",
+        data: {
+            phone: mobile,
+            system: 'ios',
+            model: model.replace(/\s+/g,""),
+            mail: email,
+            source: 'http://lm.woniu.com'
+        },
+        dataType: "jsonp",
+        jsonp: "jsoncallback",
+        success: function(data) {
+            submitFlag = null;
+            submitbtnState = true;
+            if (data.msgcode == 1 || data.msgcode == 101) {
+                $('.rx-success').show();
+            } else {
+                alert(data.msg);
+            }
+        }
+    });
+})
+
+
+var userInfo = App.getUserInfo();
+$('#j-mobile').val(userInfo['phoneNumber']);
+
+if (App.isFreeStore) {
+    // App.share('《萌将风云》邀您抢先体验！', '定义动作卡牌新概念，《萌将风云》邀您抢先体验！百种微操技能自由搭配，颠覆传统卡牌无脑数值！全立绘人物激萌搞笑，谈笑间开创宏图霸业！立即预约首测资格，100%得首测礼包！', '//mjfy.woniu.com/m/static/201711/mian/index.html', '//mjfy.woniu.com/m/static/201711/images/share_icon.jpg');
+    $('.j-share').on('mousedown', function() {
+        App.share('黎明陨落--ARPG王者之作，现已破晓来袭！', '2018年必玩APRG手游-黎明陨落现已开发预约，拥有超强的打击感和完美的画面效果，丰富的交互玩法，带来顶级的游戏体验%得首测礼包！', 'https://lm.woniu.com/m/static/act/201712/order/index.html', '//lm.woniu.com/m/static/act/201712/order/images/share.jpg');
+    });
+} else {
+    $('.j-share').on('mousedown', function() {
+        var newShare = new sugar['share-1.0.2']({
+            title: '黎明陨落--ARPG王者之作，现已破晓来袭！',
+            url: 'https://lm.woniu.com/m/static/act/201712/order/index.html',
+            desc: '2018年必玩APRG手游-黎明陨落现已开发预约，拥有超强的打击感和完美的画面效果，丰富的交互玩法，带来顶级的游戏体验%得首测礼包！',
+            img: '//lm.woniu.com/m/static/act/201712/order/images/share.jpg',
+        });
+        newShare.more();
+    });
+}
+
+
+$('.android-btn').click(function() {
+    if (submitFlag) {
+        return;
+    }
+    var mobile = $('#j-mobile').val();
+    var deviceModel = App.getDeviceInfo().deviceModel;
+    if (!mobile) {
+        alert('请输入手机号');
+        return false;
+    } else {
+        if (!(/^1[3-8]{1}[0-9]{9}$/.test(mobile))) {
+            alert('请输入正确的手机号码');
+            return false;
+        }
+    }
+    submitFlag = true;
+    $.ajax({
+        type: "GET",
+        url: '//gwactv2.woniu.com/order/Appointment?system=android&model=android&mail=snail@qq.com&phone='+mobile,
+        dataType: "jsonp",
+        jsonp: "jsoncallback",
+        success: function(data) {
+            submitFlag = null;
+            submitbtnState = true;
+            if (data.msgcode == 1 || data.msgcode == 101) {
+                $('.rx-success').show();
+            } else {
+                alert(data.msg);
+            }
+        }
+    });
+})
+
+
+$('.rx-success .close').on('mousedown', function() {
+    $('.rx-success').hide();
+});

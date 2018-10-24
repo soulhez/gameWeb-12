@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<title>天乩</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="copyright" content="苏州蜗牛数字科技股份有限公司" />
+<link rel="stylesheet" href="http://static.woniu.com/stylesheets/base.css" />
+<link rel="stylesheet" type="text/css" href="http://ml.woniu.com/static/web201607/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="http://t.woniu.com/static/web201712/css/common.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<!--@design:yangxiaoqin | @f2e:cuixin | backend:xuliangliang-->
+</head>
+<body>
+    <div class="bg">
+        <div class="topbox">
+            <!-- <a href="#" target="_blank"><img src="http://static.woniu.com/images/logo/logoicon/middle/ml.png" class="logo"></a> -->
+            <div class="widget-ztlink">
+                <a href="http://t.woniu.com/" target="_blank" class="link link1">进入官网</a> <span>|</span>
+                <a href="http://t.bbs.woniu.com/" target="_blank" class="link link2">进入论坛</a>
+                <span>分享到：</span>
+                <div class="sharebox" id="wnshare">
+                    <a href="javascript:;" class="tsina">新浪微博</a>
+                    <a href="javascript:;" class="qzone">QQ空间</a>
+                    <a href="javascript:;" class="qq">QQ好友</a>
+                    <a href="javascript:;" class="baidu">百度贴吧</a>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="main">
+            <div class="left">
+                <h3>扫描二维码 关注公众号</h3>
+                <img src="./images/wx_qrcode.jpg" width="150" id="dl-ewm">
+                <div class="down">
+                    
+                    <a href="javascript:;" class="down_yuyue" id="yuyue"></a>
+                </div>
+                <h5>玩家互动</h5>
+                <h4>—— 礼包活动抢先看 ——</h4>
+                <div class="sns">
+                    <a href="javascript:;" class="a1">微信</a>
+                    <a href="https://tieba.baidu.com/f?kw=%CC%EC%D8%C0%CA%D6%D3%CE&t=4" class="a2" id="shareBaidu">贴吧</a>
+                    <a href="https://jq.qq.com/?_wv=1027&k=5lGESqF" class="a3" id="shareQQ" target="_blank">QQ群</a>
+                    <a href="https://weibo.com/u/6241664542?wvr=5" class="a4" id="shareSina">微博</a>
+                    <div class="wx_ewm none">
+                        <img src="./images/wx_qrcode.jpg" width="150" id="shareWx">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="imglink">
+                    <div class="imglist" id="banner"></div>
+                </div>
+                <h2 id="section1">
+                    <i></i>新手上路<span>NEW HAND'S WAY</span>
+                </h2>
+                <div class="cont" id="xinshou"></div>
+                <h2 id="section2">
+                    <i></i>游戏介绍<span>GAME INTRODUCTION</span>
+                </h2>
+                <div class="cont">
+                    <div class="item">
+                        <b>游戏背景</b>
+                        <div class="links" id="beijing"></div>
+                    </div>
+                    <div class="item">
+                        <b>宗门介绍</b>
+                        <div class="links" id="zongmen"></div>
+                    </div>
+                </div>
+                <h2 id="section3">
+                    <i></i>玩法介绍<span>PLAY METHOD INTRODUCTION</span>
+                </h2>
+                <div class="cont">
+                    <div class="item">
+                        <b>任务介绍</b>
+                        <div class="links" id="renwu"></div>
+                    </div>
+                    <div class="item">
+                        <b>日常介绍</b>
+                        <div class="links" id="richang"></div>
+                    </div>
+                    <div class="item">
+                        <b>PVP玩法</b>
+                        <div class="links" id="pvp"></div>
+                    </div>
+                    <div class="item">
+                        <b>副本介绍</b>
+                        <div class="links" id="fuben"></div>
+                    </div>
+                </div>
+                <h2 id="section4">
+                    <i></i>系统介绍<span>GAME SYSTEM INTRODUCTION</span>
+                </h2>
+                <div class="cont">
+                    <div class="item">
+                        <b>装备系统</b>
+                        <div class="links" id="zhuangbei"></div>
+                    </div>
+                    <div class="item">
+                        <b>坐骑系统</b>
+                        <div class="links" id="zuoqi"></div>
+                    </div>
+                    <div class="item">
+                        <b>灵妖系统</b>
+                        <div class="links" id="lingyao"></div>
+                    </div>
+                    <div class="item">
+                        <b>翅膀系统</b>
+                        <div class="links" id="chibang"></div>
+                    </div>
+                    <div class="item">
+                        <b>法宝系统</b>
+                        <div class="links" id="fabao"></div>
+                    </div>
+                    <div class="item">
+                        <b>仙盟系统</b>
+                        <div class="links" id="xianmeng"></div>
+                    </div>
+                    <div class="item">
+                        <b>时装系统</b>
+                        <div class="links" id="shizhuang"></div>
+                    </div>
+                    <div class="item">
+                        <b>三千道藏</b>
+                        <div class="links" id="sanqiandaozang"></div>
+                    </div>
+                    <div class="item">
+                        <b>命格系统</b>
+                        <div class="links" id="mingge"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+<div class="popbox popdue ">
+    <a href="javascript:;" class="close"></a>
+    <div class="content">
+        <div class="system-head">
+            <a href="javascript:;" class="sys-btn ios-btn cur">APP Store首发预约<i></i></a>
+            <a href="javascript:;" class="sys-btn android-btn">安卓预约<i></i></a>
+        </div>
+        <div class="sys-cont sys-cont-ios cur">
+            <div class="text">《天乩之白蛇传说》手游由蜗牛游戏与欢瑞游戏联合发行，逆向影游联动开山之作，颠覆性次世代MMO仙侠手游！蜗牛第三代黑科技引擎自主研发，八项次世代秘技打造唯美三界。立刻预约，跨越千年，追溯情缘！</div>
+            <form action="">
+                <div class="inputbox ios-phone-inputbox">
+                    <input type="text" id="ios-phone" type="text" maxlength=11 pattern="[0-9]*" oninput="if(isNaN(value))value=value.slice(0,value.length-1)" placeholder="请填写真实手机号码">
+                    <div class="ios-phone-msg inputmsg"></div>
+                </div>
+                <div class="inputbox ios-email-inputbox">
+                    <input type="text" id="ios-email" placeholder="请填写您的常用邮箱">
+                    <div class="ios-email-msg inputmsg"></div>
+                </div>
+                <p>建议填写QQ邮箱，以便及时获取测试邀请信息</p>
+                <div class="inputbox ios-devicelist-inputbox">
+                    <div id="device" class="list">
+                        <span>请选择您的设备型号</span>
+                        <div class="device-list swiper-free-mode">
+                            <ul>
+                                <li>iPhoneX</li>
+                                <li>iPhone8</li>
+                                <li>iPhone8 plus</li>
+                                <li>iPhone7</li>
+                                <li>iPhone7 plus</li>
+                                <li>iPhone6s plus</li>
+                                <li>iPhone6s</li>
+                                <li>iPhone6 plus</li>
+                                <li>iPhone6</li>
+                                <li>iPhoneSE</li>
+                                <li>iPhone5S</li>
+                                <li>iPad Pro</li>
+                                <li>iPad Air2</li>
+                                <li>iPad Mini4</li>
+                                <li>iPad Mini2</li>
+                                <li>其他</li>
+                            </ul>
+                        </div>
+                    </div><br>
+                    <div class="ios-device-msg inputmsg"></div>
+                </div>
+                <a href="javascript:;" class="due-now-btn ios-due-now">立即预约</a>
+            </form>
+        </div>
+        <div class="sys-cont sys-cont-android">
+            <div class="text">《天乩之白蛇传说》手游由蜗牛游戏与欢瑞游戏联合发行，逆向影游联动开山之作，颠覆性次世代MMO仙侠手游！蜗牛第三代黑科技引擎自主研发，八项次世代秘技打造唯美三界。立刻预约，跨越千年，追溯情缘！</div>
+            <form action="">
+                <div class="inputbox android-phone-inputbox">
+                    <input type="text" id="android-phone" type="text" maxlength=11 pattern="[0-9]*" oninput="if(isNaN(value))value=value.slice(0,value.length-1)" placeholder="请填写真实手机号码">
+                    <div class="android-phone-msg inputmsg"></div>
+                </div>
+                <a href="javascript:;" class="due-now-btn android-due-now">立即预约</a> 
+            </form>
+        </div>
+    </div>
+    <div class="due-success none">
+        <div class="text"><span>恭喜您，预约成功</span><br>更多资讯内容请关注“天乩之白蛇传说手游”官方微信号，开启千年情缘之旅，<br>更多游戏礼包和精美周边等你拿！</div>
+        <a href="https://www.wjx.cn/jq/15949524.aspx" target="_blank" class="qus-btn">填写问卷</a>
+        <div class="shareto">
+            分享到:
+            <a href="javascript:;" class="sharelink weibo"></a>
+            <a href="javascript:;" class="sharelink qq"></a>
+            <a href="javascript:;" class="sharelink qzone"></a>
+            <a href="javascript:;" class="sharelink tieba"></a>
+        </div>
+        <div class="share-qrcode">
+            <div class="qrcode-box"></div><br>
+            微信公众号<b>天乩之白蛇传说手游</b><br>关注官方微信公众号
+        </div>
+    
+        <div class="enter-qq">加入官方QQ群：<b></b>，优先获测试资格<a href="" target="_blank">加入Q群</a></div>
+    </div>
+</div>
+
+
+<script charset="utf-8" src="http://static.woniu.com/scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://static.woniu.com/scripts/module/wnshare/1.0/wnshare.min.js?v=1.0"></script>
+<script charset="utf-8" src="js/jquery.tmpl.min.js"></script>
+<script src="http://ml.woniu.com/static/web201612/js/jquery.mCustomScrollbar.js" type="text/javascript" charset="utf-8"></script>
+<script charset="utf-8" src="//t.woniu.com/static/web201712/js/common.js"></script>
+<script charset="utf-8" src="js/index.js"></script>
+<script charset="utf-8" id="wn-gamehead" login="http://www.woniu.com/account/login/?gameid=107&pagename=tj&goto=http://t.woniu.com/" register="http://www.woniu.com/account/register/?gameid=107&pagename=tj&goto=http://t.woniu.com/" src="http://www.woniu.com/include/gm_header.js"></script>
+<script id="pub-footer" gamename="天乩" src="http://static.woniu.com/footer_dl/pub-footer.js?v=2"></script>
+<script type="text/javascript" src="http://static.woniu.com/scripts/module/statistics/0.1/statistics.js"></script>
+
+</body>
+</html>

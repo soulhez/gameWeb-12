@@ -1,0 +1,515 @@
+* {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-overflow-scrolling:touch
+}
+._border_box {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box
+}
+a {
+	color:#18221a;
+	text-decoration:none
+}
+dl,dt,dd {
+	padding-left:0;
+	margin-left:0
+}
+.center-block {
+	display:block;
+	margin-right:auto;
+	margin-left:auto
+}
+.flex {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:flex
+}
+.none {
+	display:none
+}
+a.link {
+	display:inline-block;
+	font-size:14px
+}
+.container {
+	width:100%
+}
+.bg {
+	position:relative;
+	height:13.34rem;
+	background:url('../images/bg.jpg') no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100%;
+	overflow:hidden
+}
+.bg .slogan {
+	position:absolute;
+	top:6rem;
+	left:50%;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	width:6.8rem;
+	height:2.87rem;
+	background:url('../images/slogan.png') no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100%
+}
+.bg .slogan-top {
+	top:6.8rem;
+}
+
+.bg .btn-wrapper {
+	position:absolute;
+	top:9rem;
+	width:100%
+}
+
+.bg .androidBtns-top{
+	top:9.6rem;
+}
+
+.bg .btn-wrapper .apt-btn {
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	width:4.29rem;
+	height:.95rem;
+	background:url('../images/btn-book.png') no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100%
+}
+.bg .btn-wrapper .tap-tap {
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:.2rem;
+	width:4.29rem;
+	height:.95rem;
+	background:url('../images/taptap.png') no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100%
+}
+.bg .btn-wrapper .android-download-m {
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:.1rem;
+	width:2.89rem;
+	height:.86rem;
+	background:url('../images/android-download-m.png') no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100%
+}
+.topnav {
+	position:fixed;
+	top:0;
+	width:7.5rem;
+	height:1rem;
+	background-color:rgba(255,255,255,0.5);
+	z-index:3
+}
+.topnav .logo {
+	position:absolute;
+	top:.2rem;
+	left:.2rem;
+	width:1.24rem;
+	height:1.24rem;
+	background:url('../images/icon.png') no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100%
+}
+.topnav .maintit {
+	display:block;
+	position:absolute;
+	top:.15rem;
+	left:1.6rem;
+	color:#18221a;
+	font:bold .4rem/.4rem "Microsoft YaHei",Tahoma,sans-serif,Verdana,Helvetica,Arial,"돋움"
+}
+.topnav .subtit {
+	display:block;
+	position:absolute;
+	top:.63rem;
+	left:1.6rem;
+	color:#18221a;
+	opacity:.7;
+	letter-spacing:0;
+	font:normal .25rem/.25rem "Microsoft YaHei",Tahoma,sans-serif,Verdana,Helvetica,Arial,"돋움"
+}
+.topnav .morenav {
+	display:block;
+	position:absolute;
+	top:.3rem;
+	right:.3rem;
+	width:.42rem;
+	height:.34rem;
+	background:url('../images/mnue.png') center;
+	background-size:100%;
+}
+/*.topnav .morenav i {
+	display:block;
+	margin-top:.1rem;
+	width:.42rem;
+	height:.05rem;
+	background-color:#000000
+}*/
+.none {
+	display:none !important
+}
+.hide {
+	display:none
+}
+.pop {
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.9);
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:80;
+	display:none
+}
+.pop .close {
+	width:.49rem;
+	height:.49rem;
+	background:url('../images/close.png') center;
+	background-size:100%;
+	position:absolute;
+	top:.3rem;
+	right:.34rem
+}
+.pop-box {
+	position:relative;
+	margin:0 auto;
+	padding-top:1.53rem;
+	width:5.22rem;
+	height:11.81rem
+}
+.ios .title {
+	color:#f8d815;
+	font-size:.58rem;
+	line-height:.56rem;
+	padding-bottom:.45rem;
+	border-bottom:1px solid #818181ab ab;
+	text-align:center
+}
+.ios .normal {
+	color:#fff;
+	font-size:.24rem;
+	line-height:.36rem;
+	padding-top:.24rem;
+	text-align:center
+}
+.input {
+	width:5.22rem;
+	height:1rem;
+	background:#fff;
+	border-radius:.8rem;
+	text-align:center;
+	font-size:.28rem;
+	box-sizing:border-box;
+	margin-top:.31rem;
+	border:none;
+	color:#666666
+}
+.ios .list {
+	position:relative;
+	cursor:pointer;
+	height:1rem;
+	width:100%;
+	margin-top:.31rem
+}
+.ios .list span {
+	height:1rem;
+	line-height:1rem;
+	display:block;
+	border-radius:.8rem;
+	border:0;
+	text-align:center;
+	color:#666666;
+	font-family:"Microsoft YaHei";
+	font-size:.28rem;
+	background:#eee url(../images/arrow.png) 4rem center no-repeat
+}
+.ios .list .device-list {
+	z-index:80;
+	height:2.2rem;
+	position:absolute;
+	overflow-y:auto;
+	background:#eee;
+	width:100%;
+	border-radius:.3rem;
+	margin-top:.05rem;
+	visibility:hidden
+}
+.ios .list .device-list.show {
+	visibility:visible
+}
+.ios .device-list ul li {
+	text-align:center;
+	padding:.1rem 0
+}
+.ios .go-apt {
+	width:100%;
+	display:inline-block;
+	height:1rem;
+	line-height:1rem;
+	border:1px solid #f8d815;
+	background:#f8d815;
+	font-size:.33rem;
+	font-weight:bold;
+	text-align:center;
+	border-radius:.8rem;
+	margin-top:.31rem;
+	color:#791414;
+	box-sizing:border-box
+}
+.android h2 {
+	font-size:.56rem;
+	color:#ffea00;
+	font-weight:bold;
+	text-align:center;
+	border-bottom:1px solid #666;
+	padding-bottom:.3rem;
+	margin-bottom:.3rem
+}
+.android .bz {
+	font-size:.28rem;
+	color:#ddd;
+	margin:.3rem 0
+}
+.android .bz em {
+	font-size:.28rem;
+	color:#fff;
+	font-weight:bold
+}
+.android .bt {
+	padding-bottom:.3rem;
+	border-bottom:1px solid #666
+}
+.android .down {
+	display:inline-block;
+	height:1rem;
+	line-height:1rem;
+	border-radius:.5rem;
+	width:4.94rem;
+	font-size:.38rem;
+	color:#ffea00;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+	border:1px solid #ffea00;
+	margin-top:.3rem
+}
+.android .jq {
+	font-size:.3rem;
+	text-align:center;
+	margin:40px 0
+}
+.android .bz span {
+	padding-left:1.1rem;
+	display:block
+}
+.android .normal {
+	color:#fff;
+	font-size:.26rem;
+	line-height:.36rem;
+	text-align:center;
+	padding-bottom:.22rem;
+	margin-top:.2rem
+}
+.android .normal b {
+	color:#ffea00
+}
+.android .qq {
+	margin-top:.5rem
+}
+.android .qq img {
+	margin-bottom:.1rem
+}
+.android .qq a {
+	padding:.05rem .1rem;
+	background:#f8d815;
+	color:#791414;
+	margin-top:.1rem;
+	border-radius:.2rem
+}
+.success .title {
+	color:#f8d815;
+	font-size:.58rem;
+	line-height:.58rem;
+	text-align:center;
+	padding-bottom:.28rem
+}
+.success .normal {
+	color:#fff;
+	font-size:12px;
+	line-height:18px;
+	text-align:center;
+	padding-bottom:.22rem
+}
+.success .normal b {
+	color:#ffea00
+}
+.success .qq {
+	margin-top:.5rem
+}
+.success .qq img {
+	margin-bottom:.1rem
+}
+.success .qq a {
+	padding:.05rem .1rem;
+	background:#f8d815;
+	color:#791414;
+	margin-top:.1rem;
+	border-radius:.2rem
+}
+.success .qtn {
+	display:block;
+	height:1rem;
+	line-height:1rem;
+	border-radius:.5rem;
+	width:100%;
+	font-size:.38rem;
+	color:#000;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+	border:1px solid #000;
+	margin-top:.3rem
+}
+.qrcode {
+	width:2.96rem;
+	height:2.96rem;
+	display:block;
+	margin:0 auto;
+	padding-top:.26rem;
+	padding-bottom:.1rem
+}
+.qr-lang {
+	font-size:.3rem;
+	line-height:.3rem;
+	font-weight:bold;
+	text-align:center;
+	padding-bottom:.34rem
+}
+.success .normal span {
+	font-weight:bold
+}
+.success .normal em {
+	color:#ef3847
+}
+.popsns {
+	text-align:center
+}
+.popsns h2 {
+	width:6rem;
+	margin:0 auto;
+	margin-top:1rem;
+	font:normal .56rem/2 "";
+	color:#f8d815;
+	border-bottom:.01rem solid rgba(255,255,255,0.2);
+	text-align:center;
+	margin-bottom:.3rem
+}
+.popsns p {
+	text-align:center;
+	font:normal .24rem/1.5 "";
+	color:#fff
+}
+.popsns img {
+	margin:.2rem auto;
+	width:2.66rem
+}
+.popsns .popshare {
+	width:6rem;
+	height:1rem;
+	border:1px solid #ffea00;
+	font:bold .4rem/1rem "";
+	color:#ffea00;
+	border-radius:.5rem;
+	margin:0 auto;
+	margin-top:.4rem
+}
+.popsns .sns a {
+	display:block;
+	width:1.4rem;
+	height:2rem;
+	float:left;
+	margin:.3rem .3rem;
+	padding-top:1.2rem;
+	font:normal .28rem/1 "";
+	color:#fff
+}
+.popsns .sns .a1 {
+	margin-left:1rem;
+	background:url(../images/qqgroup.png) top center no-repeat;
+	background-size:.95rem
+}
+.popsns .a2 {
+	background:url(../images/tieba.png) top center no-repeat;
+	background-size:.95rem
+}
+.popsns .a3 {
+	background:url(../images/sina.png) top center no-repeat;
+	background-size:.95rem
+}
+.popsns a b {
+	color:#ffea00
+}
+
+.menu{
+	background: rgba(255,255,255,0.9);
+}
+
+	.menu .close{
+		width: .4rem;
+	    height: .4rem;
+	    background: url(../images/close-blank.png) center;
+	    background-size:100%;
+		position:absolute;
+		z-index: 10;
+	}
+
+	.menu .pop-box{
+		width: 90%;
+	}
+
+	.menu .pop-box .word{
+		display: block;
+		width: 2.1rem;
+		height: .46rem;
+		margin:1rem auto;
+	}
+
+	.menu .pop-box ul li{
+		padding: .4rem 0;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size:100%;
+		background-image: url(../images/menu-line.png);
+	}
+
+		.menu .pop-box ul li a{
+			display: block;
+			width: 1.8rem;
+			height: .8rem;
+			margin:0 auto;
+			background-repeat: no-repeat;
+	        background-size:100%;
+	        background-position: center;
+		}
+
+		.menu .pop-box ul li a.menu-home{
+			background-image: url(../images/menu-home.png);
+		}
+
+		.menu .pop-box ul li a.menu-forum{
+			background-image: url(../images/menu-forum.png);
+		}
+
+		.menu .pop-box ul li a.menu-comm{
+			background-image: url(../images/menu-comm.png);
+		}

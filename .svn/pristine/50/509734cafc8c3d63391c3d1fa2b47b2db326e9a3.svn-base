@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>资料站</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="copyright" content="苏州蜗牛数字科技股份有限公司"/>
+<meta name="author" content="evil_web"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta content="telphone=no" name="format-detection">
+<meta name="viewport" content="width=750,target-densitydpi=high-dpi,minimum-scale=0.3, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" href="http://static.woniu.com/stylesheets/mobase.css" />
+<link rel="stylesheet" href="css/index.css"/>
+<script type="text/javascript">
+    //为页面html动态设置font-size值
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if(clientWidth>750){
+                        clientWidth=750;
+                    }
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = clientWidth / 7.5 + 'px';
+                    //等价于clientWidth / 750 * 100 + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);//resize
+        doc.addEventListener('DOMContentLoaded', recalc, false);//reload
+    })(document, window);
+</script>
+
+
+</head>
+    <!--Design: @ f2c:cuixin -->
+<body>
+    <div class="zl-warp">
+        <div class="zl-header">
+            <a href="//jy2.com/m/index.html">
+                <div class="md-top">
+                    <div class="logo"><img src="//jy2.woniu.com/m/static/web201712/images/logo.png"></div>
+                    <div class="text">
+                        天乩之白蛇传说<br><em>第三代黑科技引擎 次世代宿命情缘手游</em>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="zl-main">
+            <!--游戏介绍-->
+            <div class="zl-list zl-zl5 clear">
+                <div class="zl-list-tit" data-zt="1">新手上路<em>NEW HAND'S WAY</em><b class="jt"></b></div>
+                <div class="zl-list-details" id="xinshou">
+                </div>
+            </div>
+            <!--新手入门-->
+            <div class="zl-list zl-zl2 clear">
+                <div class="zl-list-tit">游戏介绍<em>GAME INTRODUCTION</em><b class="jt"></b></div>
+                <div class="zl-list-details">
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">游戏背景</p>
+                        <div class="dl-list-cont" id="beijing">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">宗门介绍</p>
+                        <div class="dl-list-cont" id="zongmen">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--基础信息-->
+            <div class="zl-list zl-zl3 clear">
+                <div class="zl-list-tit">玩法介绍<em>PLAY METHOD INTRODUCTION</em><b class="jt"></b></div>
+                <div class="zl-list-details">
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">任务介绍</p>
+                        <div class="dl-list-cont" id="renwu">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">日常介绍</p>
+                        <div class="dl-list-cont" id="richang">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">PVP玩法</p>
+                        <div class="dl-list-cont" id="pvp">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">副本介绍</p>
+                        <div class="dl-list-cont" id="fuben">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zl-list zl-zl4 clear">
+                <div class="zl-list-tit">系统介绍<em>GAME SYSTEM INTRODUCTION</em><b class="jt"></b></div>
+                <div class="zl-list-details">
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">装备系统</p>
+                        <div class="dl-list-cont" id="zhuangbei">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">坐骑系统</p>
+                        <div class="dl-list-cont" id="zuoqi">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">灵妖系统</p>
+                        <div class="dl-list-cont" id="lingyao">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">翅膀系统</p>
+                        <div class="dl-list-cont" id="chibang">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">法宝系统</p>
+                        <div class="dl-list-cont" id="fabao">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">仙盟系统</p>
+                        <div class="dl-list-cont" id="xianmeng">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">时装系统</p>
+                        <div class="dl-list-cont" id="shizhuang">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">三千道藏</p>
+                        <div class="dl-list-cont" id="sanqiandaozang">
+                        </div>
+                    </div>
+                    <div class="dl-list clear">
+                        <p class="dl-list-tit">命格系统</p>
+                        <div class="dl-list-cont" id="mingge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="zl-footer">
+            <div class="fl-sq">
+                <a href="javascript:;" class="weixin"></a>
+                <a href="http://t.bbs.woniu.com/" class="forum"></a>
+                <a href="https://weibo.com/u/6241664542?wvr=5" class="sina"></a>
+                <a href="https://tieba.baidu.com/f?kw=%CC%EC%D8%C0%CA%D6%D3%CE&t=4" class="tieba"></a>
+            </div>
+            <p class="zl-share">分享给好友</p>
+            <p class="kf-tell">客服电话：0512-67671271</p>
+            <div class="fl-bottom">
+                COPYRIGHT &copy; 1998-2017 WONIU.ALL RIGHTS RESERVED.<br/>
+                苏州蜗牛数字科技股份有限公司 版权所有
+            </div>
+        </div>
+            <!--弹窗-->
+            <!--ewm-->
+        <div class="maskdiv"></div>
+        <div class="maskdiv1"></div>
+        <div class="zl-pop ewm">
+            <div class="pop-cont">
+                <img src="//jy2.woniu.com/m/static/web201712/images/qrcode.jpg"/>
+                <p>长按识别二维码关注官方微信</p>
+                <h3>官方公众号：<em>天乩之白蛇传说手游</em></h3>
+            </div>
+            <span class="close"></span>
+        </div>
+    </div>
+
+
+
+    <!-- 分享弹窗 -->
+    <!-- <div class="shareBox" id="shareBox" style="display: none;">
+        <div class="layer"></div>
+        <div class="wrap">
+            <a class="weixin" href="javascript:;"></a>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?title=传承经典，创新未来！2017蜗牛旗舰手游《太极熊猫3：猎龙》展现1536*1536Km²超大世界无束缚自由狩猎，1：1真实场景360°无死角全景空域战斗，还原最真实视觉带来极致动作快感！&amp;url=http%3A%2F%2Fm.panda3.woniu.com%2Fstatic%2Finfo&amp;source=bookmark&amp;pic=http://panda3.woniu.com/m/static/prev/images/share-img1.jpg"></a>
+            <a class="qqz" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fm.panda3.woniu.com%2Fstatic%2Finfo&amp;title=太极熊猫3：猎龙-2017蜗牛旗舰手游&amp;pics=http://panda3.woniu.com/m/static/prev/images/share-img1.jpg&amp;summary=传承经典，创新未来！2017蜗牛旗舰手游《太极熊猫3：猎龙》展现1536*1536Km²超大世界无束缚自由狩猎，1：1真实场景360°无死角全景空域战斗，还原最真实视觉带来极致动作快感！" target="_blank"></a>
+            <a class="qq" href="http://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fm.panda3.woniu.com%2Fstatic%2Finfo&amp;desc=传承经典，创新未来！2017蜗牛旗舰手游《太极熊猫3：猎龙》展现1536*1536Km²超大世界无束缚自由狩猎，1：1真实场景360°无死角全景空域战斗，还原最真实视觉带来极致动作快感！&amp;title=太极熊猫3：猎龙-2017蜗牛旗舰手游&amp;summary=&amp;pics=http://panda3.woniu.com/m/static/prev/images/share-img1.jpg&amp;flash=&amp;site=&amp;style=201&amp;width=32&amp;height=32&amp;showcount=" target="_blank"></a>
+            <span class="close">取消</span>
+            <div class="weixin-share"></div>
+            <div class="popup weixin-share1" style="display: none;">
+                <div class="layer" style="display:block;"></div>
+                <div class="wrap">
+                    <p>http://m.panda3.woniu.com/static/info<br>请通过浏览器自带分享功能分享本页</p>
+                </div>
+                <div class="close"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- 分享box -->
+    <div class="shareBox" id="shareBox">
+        <div class="layer"></div>
+        <div class="wrap">
+            <a class="weixin" href="javascript:;"></a>
+            <a class="weibo" href="javascript:;"></a>
+            <a class="qqz" href="javascript:;" target="_blank"></a>
+            <a class="qq" href="javascript:;" target="_blank"></a>
+            <span class="close">取消</span>
+            <div class="weixin-share"></div>
+            <div class="popup weixin-share1">
+                <div class="layer" style="display:none;"></div>
+                <div class="wrap">
+                        <!-- http://t.woniu.com/m/<br> -->
+                    <p>请通过浏览器自带分享功能分享本页</p>
+                </div>
+                <div class="close"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.10.2.min.js"></script>
+    <!-- 
+    <script charset="utf-8" src="http://static.woniu.com/script/zepto/zepto-1.1.6-min.js"></script>
+
+    <script charset="utf-8" src="http://static.woniu.com/script/??/mobile/base.js,/mobile/sugar/sugar.js,/mobile/sugar/share/share-1.0.2.js"></script>
+    -->
+    <script src="//static.woniu.com/script/module/mshare/mshare.js"></script>
+    <script charset="utf-8" src="js/jquery.tmpl.min.js"></script>
+    <script charset="utf-8" src="js/index.js"></script>
+    <script type="text/javascript" src="http://static.woniu.com/scripts/module/statistics/0.1/statistics.js"></script>
+</body>
+</html>
